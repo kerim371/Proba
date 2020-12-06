@@ -1,5 +1,5 @@
 
-set(proj HDF5)
+set(proj hdf5)
 
 # Set dependency list
 set(${proj}_DEPENDS
@@ -14,8 +14,8 @@ if(${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
 endif()
 
 # Sanity checks
-if(DEFINED HDF5_DIR AND NOT EXISTS ${HDF5_DIR})
-  message(FATAL_ERROR "HDF5_DIR [${HDF5_DIR}] variable is defined but corresponds to nonexistent directory")
+if(DEFINED hdf5_DIR AND NOT EXISTS ${hdf5_DIR})
+  message(FATAL_ERROR "hdf5_DIR [${hdf5_DIR}] variable is defined but corresponds to nonexistent directory")
 endif()
 
 if(NOT DEFINED ${proj}_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
@@ -56,8 +56,8 @@ if(NOT DEFINED ${proj}_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
       -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY:PATH=${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}
 #      -DCMAKE_PDB_OUTPUT_DIRECTORY:PATH=${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}
       # Install directories
-      -DHDF5_INSTALL_RUNTIME_DIR:STRING=${Slicer_INSTALL_THIRDPARTY_LIB_DIR}
-      -DHDF5_INSTALL_LIBRARY_DIR:STRING=${Slicer_INSTALL_THIRDPARTY_LIB_DIR}
+      -Dhdf5_INSTALL_RUNTIME_DIR:STRING=${Slicer_INSTALL_THIRDPARTY_LIB_DIR}
+      -Dhdf5_INSTALL_LIBRARY_DIR:STRING=${Slicer_INSTALL_THIRDPARTY_LIB_DIR}
       -DCMAKE_INSTALL_LIBDIR:STRING=${Slicer_INSTALL_THIRDPARTY_LIB_DIR} # Skip default initialization by GNUInstallDirs CMake module
       # Options
       -DBUILD_TESTING:BOOL=OFF

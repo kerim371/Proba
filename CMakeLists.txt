@@ -41,7 +41,7 @@ add_subdirectory(KKK)
 #-----------------------------------------------------------------------------
 set(EXTENSION_CPACK_INSTALL_CMAKE_PROJECTS)
 list(APPEND EXTENSION_CPACK_INSTALL_CMAKE_PROJECTS "${Foo_DIR};Foo;ALL;/")
-list(APPEND EXTENSION_CPACK_INSTALL_CMAKE_PROJECTS "${HDF5_DIR};HDF5;ALL;/")
+list(APPEND EXTENSION_CPACK_INSTALL_CMAKE_PROJECTS "${hdf5_DIR};hdf5;ALL;/")
 set(${EXTENSION_NAME}_CPACK_INSTALL_CMAKE_PROJECTS "${EXTENSION_CPACK_INSTALL_CMAKE_PROJECTS}" CACHE STRING "List of external projects to install" FORCE)
 
 #-----------------------------------------------------------------------------
