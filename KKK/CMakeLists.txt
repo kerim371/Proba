@@ -1,5 +1,4 @@
 message("RUNNING KKK")
-#set(HDF5_TOOLS_DIR "C:/S/extensions/Proba-build/HDF5-build/tools")
 #-----------------------------------------------------------------------------
 set(MODULE_NAME KKK)
 set(MODULE_TITLE ${MODULE_NAME})
@@ -8,7 +7,7 @@ string(TOUPPER ${MODULE_NAME} MODULE_NAME_UPPER)
 
 #find_package(hdf5 CONFIG REQUIRED PATHS ${HDF5_DIR})
 find_package(hdf5 REQUIRED)
-message("RUNNING KKK")
+
 if(hdf5_FOUND)
   message("WE FOUND HDF5 !!!")
 else()
@@ -45,7 +44,7 @@ set(MODULE_MOC_SRCS
 set(MODULE_UI_SRCS
   Resources/UI/qSlicer${MODULE_NAME}ModuleWidget.ui
   )
-
+message(${hdf5})
 set(MODULE_TARGET_LIBRARIES
   vtkSlicer${MODULE_NAME}ModuleLogic
   qSlicer${MODULE_NAME}ModuleWidgets

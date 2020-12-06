@@ -61,6 +61,8 @@ if(NOT DEFINED ${proj}_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
       -DCMAKE_INSTALL_LIBDIR:STRING=${Slicer_INSTALL_THIRDPARTY_LIB_DIR} # Skip default initialization by GNUInstallDirs CMake module
       # Options
       -DBUILD_TESTING:BOOL=OFF
+      -DBUILD_SHARED_LIBS:BOOL=ON
+      -DBUILD_STATIC_LIBS:BOOL=ON
     INSTALL_COMMAND ""
     DEPENDS
       ${${proj}_DEPENDS}
