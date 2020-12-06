@@ -7,7 +7,7 @@ set(MODULE_TITLE ${MODULE_NAME})
 string(TOUPPER ${MODULE_NAME} MODULE_NAME_UPPER)
 
 #find_package(hdf5 CONFIG REQUIRED PATHS ${HDF5_DIR})
-find_package(hdf5 REQUIRED NO_MODULE)
+find_package(hdf5 REQUIRED)
 message("RUNNING KKK")
 if(hdf5_FOUND)
   message("WE FOUND HDF5 !!!")

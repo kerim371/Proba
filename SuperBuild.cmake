@@ -20,7 +20,7 @@ set(proj ${SUPERBUILD_TOPLEVEL_PROJECT})
 # Project dependencies
 set(${proj}_DEPENDS
    Foo
-   HDF5
+   hdf5
    )
 
 ExternalProject_Include_Dependencies(${proj}
